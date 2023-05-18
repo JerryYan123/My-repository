@@ -1,0 +1,428 @@
+{
+	"info": {
+		"_postman_id": "0e3fc543-0f65-4cef-bbbe-ee0cdae05d45",
+		"name": "myUw",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21314758"
+	},
+	"item": [
+		{
+			"name": "http://localhost:4400",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"inputs\":{\r\n  \"id\":null,\r\n    \"firstName\":\"Mervin\", \r\n    \"lastName\":\"Jons\", \r\n    \"password\":\"ppp\", \r\n    \"avatar\":\"avatar.jpg\", \r\n    \"initials\":\"MJ\", \r\n    \"email\":\"email@123.com\", \r\n    \"bio\":\"some bio\", \r\n    \"active\":1, \r\n    \"dateAdded\":\"*fillInCurrentDate*\"\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4400",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4400",
+					"query": [
+						{
+							"key": "/course/getCoachStats",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4400/addOrUpdateStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"inputs\":\r\n{\r\n    \"netId\":1,\r\n    \"phone\":\"20633333333\", \r\n    \"email\":\"1@uw.edu\",\r\n    \"isShared\":\"0\", \r\n    \"campusName\":\"seattle\",\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4400/addOrUpdateStudent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4400",
+					"path": [
+						"addOrUpdateStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4400/addOrUpdateQuarter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"inputs\":{\r\n    \"title\":\"spring\", \r\n    \"registrationPreview\":\"spring 2022\", \r\n    \"registeredCourses\": \"math124\", \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4400/addOrUpdateQuarter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4400",
+					"path": [
+						"addOrUpdateQuarter"
+					],
+					"query": [
+						{
+							"key": "/course/getCoachStats",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4400/addOrUpdateList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"inputs\": {\r\n        \"sln\": 10343,\r\n        \"type\": \"lecture\",\r\n        \"instructor\": \"bob\",\r\n        \"additionalDetail\": \"[{\\\"Major req\\\":\\\"to all\\\"}]\",\r\n        \"time\": \"10:30\",\r\n        \"status\": \"open\",\r\n        \"sectioncol5\": \"AA\",\r\n        \"courseId\": \"100\",\r\n        \"buildingAbbr\": \"MGH\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4400/addOrUpdateSection",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4400",
+					"path": [
+						"addOrUpdateSection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4400/updateStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"inputs\": {\r\n        \"netId\": 1,\r\n        \"isShared\": 1,\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4400/updateStudent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4400",
+					"path": [
+						"updateStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4400/updateProgram",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"inputs\": {\r\n        \"id\": 100,\r\n        \"title\": \"I am a new card\",\r\n        \"description\": \"Description\",\r\n        \"order\": 100,\r\n        \"cover\": null,\r\n        \"dateDue\": \"2020-12-19 07:40:32\",\r\n        \"listId\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4400/addOrUpdateCard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4400",
+					"path": [
+						"addOrUpdateCard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4400/updateSchedule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"inputs\": {\r\n        \"registeredSchedule\": \"10\",\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4400/updateSchedule",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4400",
+					"path": [
+						"updateSchedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4400/updateSchedule2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"inputs\": {\r\n        \"registeredSchedule\": \"11\",\r\n        \"id\": 2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4400/updateSchedule2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4400",
+					"path": [
+						"updateSchedule2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4400/getStudentCourse/123456",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4400/getStudentCourse/123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4400",
+					"path": [
+						"getStudentCourse",
+						"123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4400/getQuarterSection/spring",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4400/getBoardAndListsAndCards/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4400",
+					"path": [
+						"getBoardAndListsAndCards",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4400/deleteUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"inputs\": {\r\n        \"netId\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4400/deleteStudent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4400",
+					"path": [
+						"deleteStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4400/deleteBoard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"inputs\": {\r\n        \"sln\": 10133\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4400/deleteSection1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4400",
+					"path": [
+						"deleteSection1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4400/deleteSection2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"inputs\": {\r\n        \"sln\": 10343\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4400/deleteSection2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4400",
+					"path": [
+						"deleteSection2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4400/deleteSchedule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"inputs\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4400/deleteSchedule",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4400",
+					"path": [
+						"deleteSchedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4400/deleteSchedule2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"inputs\": {\r\n        \"id\": 2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4400/deleteSchedule2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4400",
+					"path": [
+						"deleteSchedule2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
